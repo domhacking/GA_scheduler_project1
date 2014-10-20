@@ -5,6 +5,7 @@ class CreateCourses < ActiveRecord::Migration
       t.integer :maxsize
       t.datetime :start_date
       t.datetime :end_date
+      t.integer :classroom_id
 
       t.timestamps
     end

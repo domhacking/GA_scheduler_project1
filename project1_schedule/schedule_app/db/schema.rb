@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141020114356) do
+ActiveRecord::Schema.define(:version => 20141020162726) do
 
   create_table "classrooms", :force => true do |t|
     t.string   "name"
     t.integer  "maxpeople"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "location_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "courses", :force => true do |t|
@@ -25,6 +26,14 @@ ActiveRecord::Schema.define(:version => 20141020114356) do
     t.integer  "maxsize"
     t.datetime "start_date"
     t.datetime "end_date"
+    t.integer  "classroom_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "courses_users", :id => false, :force => true do |t|
+    t.integer  "course_id"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
