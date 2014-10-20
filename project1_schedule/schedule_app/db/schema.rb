@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20141020162726) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "classroom_id"
+    t.integer  "user_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20141020162726) do
     t.string   "role"
     t.string   "email"
     t.string   "password_digest"
+    t.string   "course_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end

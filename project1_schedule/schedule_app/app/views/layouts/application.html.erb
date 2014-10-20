@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="header">
 <h1>GA Scheduler</h1>
 
 <% flash.each do |name, msg| %>
@@ -14,17 +15,25 @@
       <%= msg %>
     </div>
   <% end %>
+<nav>
+<%= link_to "COURSES", courses_path %> 
+<%= link_to "CLASSROOMS", classrooms_path %> 
+<%= link_to "USERS", users_path %> 
+</nav>
 
-<% if current_user %>
+  <% if current_user %>
   Hello <%= current_user.email %>
   <%= link_to "Logout", logout_path %>
 <%else%>
 <%= link_to "Login", new_session_path %> or <%= link_to "Signup", new_user_path %> 
 <% end %>
+</div>
 
-<%= link_to "COURSES", courses_path %> 
-<%= link_to "CLASSROOMS", classrooms_path %> 
-<%= link_to "USERS", users_path %> 
+
+
+
+
+
 
 
 <%= yield %>

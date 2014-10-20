@@ -1,6 +1,7 @@
-<h1>Editing classroom</h1>
+<h2>Editing classroom</h2>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @classroom %> |
+<%= link_to 'Destroy', classroom, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', classrooms_path %>

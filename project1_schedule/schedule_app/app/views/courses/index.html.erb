@@ -1,11 +1,11 @@
-<h1>Listing courses</h1>
+<h2>Listing courses</h2>
 
 <table>
   <tr>
     <th>Name</th>
+    <th>Classroom</th>
     <th>Maxsize</th>
-    <th>Start time</th>
-    <th>End time</th>
+    <th>Head Teacher</th>
     <th>Start date</th>
     <th>End date</th>
     <th></th>
@@ -15,13 +15,15 @@
 
 <% @courses.each do |course| %>
   <tr>
-    <td><%= course.name %></td>
+
+    <td><%= link_to course.name %></td>
+    <td><%= course.classroom.id %></td>
     <td><%= course.maxsize %></td>
+    <!-- <td><%#= course.user_id.role("instructor")%></td> -->
     <td><%= course.start_date %></td>
     <td><%= course.end_date %></td>
-    <td><%= link_to 'Show', course %></td>
-    <td><%= link_to 'Edit', edit_course_path(course) %></td>
-    <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%=  %></td>
+   
   </tr>
 <% end %>
 </table>
