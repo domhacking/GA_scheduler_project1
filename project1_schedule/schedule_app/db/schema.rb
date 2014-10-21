@@ -27,16 +27,13 @@ ActiveRecord::Schema.define(:version => 20141020162726) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer  "classroom_id"
-    t.integer  "user_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
 
   create_table "courses_users", :id => false, :force => true do |t|
-    t.integer  "course_id"
-    t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer "user_id"
+    t.integer "course_id"
   end
 
   create_table "locations", :force => true do |t|
@@ -50,7 +47,6 @@ ActiveRecord::Schema.define(:version => 20141020162726) do
     t.string   "role"
     t.string   "email"
     t.string   "password_digest"
-    t.string   "course_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end

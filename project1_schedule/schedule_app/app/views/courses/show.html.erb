@@ -23,7 +23,9 @@
 
 <p>
   <b>Students:</b>
-  <%= @course.user_id.name %>
+  <% @course.instructors.each do |instructors|%>
+        <%= instructors.name %>
+        <% end %>
 </p>
 
 

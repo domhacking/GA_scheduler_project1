@@ -16,10 +16,12 @@
 <% @courses.each do |course| %>
   <tr>
 
-    <td><%= link_to course.name %></td>
+    <td><%= link_to course.name, course  %></td>
     <td><%= course.classroom.id %></td>
     <td><%= course.maxsize %></td>
-    <!-- <td><%#= course.user_id.role("instructor")%></td> -->
+    <td><% course.instructors.each do |instructor|%>
+        <%= instructor.name %>
+        <% end %></td>
     <td><%= course.start_date %></td>
     <td><%= course.end_date %></td>
     <td><%=  %></td>
