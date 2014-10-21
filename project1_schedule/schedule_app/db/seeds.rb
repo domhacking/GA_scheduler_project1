@@ -56,6 +56,7 @@ instructor4 = User.create!(name: "Guy Brown", email: "gb@gmail.com", password: "
 instructor5 = User.create!(name: "Tony Little", email: "tl@gmail.com", password: "password5", role: "Instructor")
 
 wdi1.instructors << instructor2
+binding.pry
 wdi3.instructors << instructor2
 wdi5.instructors << instructor2
 wdi7.instructors << instructor2

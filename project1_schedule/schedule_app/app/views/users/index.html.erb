@@ -1,19 +1,36 @@
 <h2>Listing users</h2>
 
+<%= search_form_for @q, url: search_users_path, method: :post do |f| %>
+    <%= f.condition_fields do |c| %>
+        <div>
+            <%= c.attribute_fields do |a| %>
+            <%= a.attribute_select associations: [:user] %>
+            <% end %>
+            <%= c.predicate_select %>
+                <%= c.value_fields do |v| %>
+                    <%= v.text_field :value %>
+                <% end %>
+        </div>
+        <% end %>
+    <%= f.submit %>
+<% end %>
+
 <table>
   <tr>
     <th>Name</th>
     <th>Role</th>
-    <th>Course</th>
+    <th>Course History</th>
     <th>Email</th>
   
   </tr>
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= link_to user.name, user.name %></td>
+    <td><%= user.name %></td>
     <td><%= user.role %></td>
-    <td><%= user.course_id %></td>
+    <td><% user.courses.each do |course|%>
+        <%= course.name %>
+        <% end %></td>
     <td><%= user.email %></td>
    
 

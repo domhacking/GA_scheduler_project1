@@ -2,8 +2,9 @@ ScheduleApp::Application.routes.draw do
   
   resources :sessions
   
-  resources :users
-
+  resources :users do 
+    collection {post :search, to: 'users#search'}
+  end 
 
   resources :courses
 

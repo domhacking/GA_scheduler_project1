@@ -22,15 +22,29 @@
 </p>
 
 <p>
-  <b>Students:</b>
+  <b>Head Teacher:</b>
   <% @course.instructors.each do |instructors|%>
         <%= instructors.name %>
+        <% end %>
+</p>
+<p>
+  <b>Teaching Assitants:</b>
+  <% @course.teaching_assistants.each do |teaching_assistants|%>
+        <%= teaching_assistants.name %>
+        <% end %>
+</p>
+
+
+<p>
+  <b>Students:</b>
+  <% @course.students.each do |students|%>
+        <%= students.name %>
         <% end %>
 </p>
 
 
 
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Edit', edit_course_path(@course) %> | 
+<%= link_to 'Destroy', course_path, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', courses_path %>

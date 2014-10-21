@@ -1,13 +1,19 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
-  def index
-    @users = User.all
 
+  def index
+    @q = User.search(params[:q])
+    @users = @q.result(distinct: true)
+    @q.build_condition
     respond_to do |format|
-      format.html # index.html.erb
+      format.html {render :index} 
       format.json { render json: @users }
     end
+  end
+
+  def search
+    index
   end
 
   # GET /users/1

@@ -13,9 +13,12 @@
  */
 *{
   margin: 0 auto;
-  width: 1260px;
+  width: 900px;
 }
-
+h1 img{
+  width: 200px;
+  height: 80px;
+}
 
 .header{
   display: inline-block;

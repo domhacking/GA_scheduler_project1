@@ -1,11 +1,12 @@
 class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
+  
   def index
-    @courses = Course.all
-
+    @q = Course.search(params[:q])
+    @courses = @q.result(distinct: true)
     respond_to do |format|
-      format.html # index.html.erb
+      format.html {render :index} # index.html.erb
       format.json { render json: @courses }
     end
   end
