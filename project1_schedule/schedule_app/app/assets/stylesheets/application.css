@@ -11,26 +11,35 @@
  *= require_self
  *= require_tree .
  */
+/*
 *{
-  margin: 0 auto;
-  width: 900px;
+  width: 1200px;
 }
-h1 img{
-  width: 200px;
-  height: 80px;
+
+body{
+  margin:0px;
+} 
+
+div h1  {
+  height:150px;
+  width:300px;
+  display: inline-block;
+
+}
+
+h1{
+  border: 0px;
 }
 
 .header{
-  display: inline-block;
-  width: 580px ;
-  height: 20px;
+  width: 1460px ;
+  height: 80px;
   background-color: black;
   color: white;
   padding: 20px;
   margin: 0px;
   text-align: 
 }
-
 
 nav {
   display: inline-block;
@@ -39,6 +48,7 @@ nav {
   border: 0px;
   width: 250px;
   height: 20px;
+
 }
 
 nav a {

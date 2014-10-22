@@ -5,6 +5,7 @@ class Course < ActiveRecord::Base
   has_and_belongs_to_many :students, class_name: "User", conditions: [ "role=?", "Student"]
   has_and_belongs_to_many :instructors, class_name: "User", conditions: [ "role=?", "Instructor"]
   has_and_belongs_to_many :teaching_assistants, class_name: "User", conditions: [ "role=?", "Teaching Assistant"]
+  has_and_belongs_to_many :admins, class_name: "User", conditions: [ "role=?", "Admin"]
 
 
 end
