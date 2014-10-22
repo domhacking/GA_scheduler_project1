@@ -12,9 +12,7 @@ User.delete_all
 Classroom.delete_all
 
 
-
 location = Location.create!(name: "9 Back Hill")
-
 
 
 classroom1 = Classroom.create!(name: "Classroom 1", maxpeople: 15, location_id: location.id)
@@ -27,26 +25,31 @@ classroom7 = Classroom.create!(name: "Classroom 7", maxpeople: 30, location_id: 
 classroom8 = Classroom.create!(name: "Classroom 8", maxpeople: 5, location_id: location.id)
 
 
+wdi5 = Course.create!(name: "WDI 5", start_date: 20130922, end_date: 20131220, classroom_id: classroom2.id, maxsize: 15)
+wdi6 = Course.create!(name: "WDI 6", start_date: 20131222, end_date: 20140320, classroom_id: classroom3.id, maxsize: 10)
+wdi7 = Course.create!(name: "WDI 7", start_date: 20140322, end_date: 20140620, classroom_id: classroom5.id, maxsize: 10)
+wdi8 = Course.create!(name: "WDI 8", start_date: 20140622, end_date: 20140920, classroom_id: classroom2.id, maxsize: 15)
+wdi9 = Course.create!(name: "WDI 9", start_date: 20140922, end_date: 20141220, classroom_id: classroom6.id, maxsize: 20)
+wdi10 = Course.create!(name: "WDI 10", start_date: 20141222, end_date: 20150320, classroom_id: classroom7.id, maxsize: 20)
+wdi11 = Course.create!(name: "WDI 11", start_date: 20150322, end_date: 20150620, classroom_id: classroom8.id, maxsize: 20)
+wdi12 = Course.create!(name: "WDI 12", start_date: 20150622, end_date: 20150920, classroom_id: classroom1.id, maxsize: 20)
 
-wdi1 = Course.create!(name: "WDI 1", start_date: 20121117, end_date: 20120215, classroom_id: classroom1.id, maxsize: 20)
-wdi2 = Course.create!(name: "WDI 2", start_date: 20120217, end_date: 20120515, classroom_id: classroom2.id, maxsize: 15)
-wdi3 = Course.create!(name: "WDI 3", start_date: 20120517, end_date: 20120815, classroom_id: classroom3.id, maxsize: 10)
-wdi4 = Course.create!(name: "WDI 4", start_date: 20120817, end_date: 20121215, classroom_id: classroom5.id, maxsize: 10)
-wdi5 = Course.create!(name: "WDI 5", start_date: 20130117, end_date: 20130315, classroom_id: classroom2.id, maxsize: 15)
-wdi6 = Course.create!(name: "WDI 6", start_date: 20130317, end_date: 20130615, classroom_id: classroom6.id, maxsize: 20)
-wdi7 = Course.create!(name: "WDI 7", start_date: 20130617, end_date: 20130915, classroom_id: classroom7.id, maxsize: 20)
-wdi8 = Course.create!(name: "WDI 8", start_date: 20130917, end_date: 20140115, classroom_id: classroom8.id, maxsize: 20)
-fewd1 = Course.create!(name: "FEWD 1", start_date: 20120117, end_date: 20120415, classroom_id: classroom3.id, maxsize: 10)
-fewd2 = Course.create!(name: "FEWD 2", start_date: 20120517, end_date: 20120815, classroom_id: classroom3.id, maxsize: 7)
-fewd3 = Course.create!(name: "FEWD 3", start_date: 20120817, end_date: 20121215, classroom_id: classroom1.id, maxsize: 10)
-fewd4 = Course.create!(name: "FEWD 4", start_date: 20121217, end_date: 20130315, classroom_id: classroom8.id, maxsize: 5)
-fewd5 = Course.create!(name: "FEWD 5", start_date: 20130317, end_date: 20130615, classroom_id: classroom2.id, maxsize: 8)
-fewd6 = Course.create!(name: "FEWD 6", start_date: 20130617, end_date: 20130915, classroom_id: classroom4.id, maxsize: 10)
-fewd7 = Course.create!(name: "FEWD 7", start_date: 20130917, end_date: 20140215, classroom_id: classroom4.id, maxsize: 20)
-bewd1 = Course.create!(name: "BEWD 1", start_date: 20131217, end_date: 20140215, classroom_id: classroom6.id, maxsize: 14)
-bewd2 = Course.create!(name: "BEWD 2", start_date: 20140217, end_date: 20140515, classroom_id: classroom2.id, maxsize: 4)
-bewd3 = Course.create!(name: "BEWD 3", start_date: 20140517, end_date: 20140815, classroom_id: classroom1.id, maxsize: 8)
+
+fewd1 = Course.create!(name: "FEWD 1", start_date: 20130922, end_date: 20131220, classroom_id: classroom3.id, maxsize: 10)
+fewd2 = Course.create!(name: "FEWD 2", start_date: 20131222, end_date: 20140320, classroom_id: classroom3.id, maxsize: 7)
+fewd3 = Course.create!(name: "FEWD 3", start_date: 20140322, end_date: 20140620, classroom_id: classroom1.id, maxsize: 10)
+fewd4 = Course.create!(name: "FEWD 4", start_date: 20140622, end_date: 20140920, classroom_id: classroom8.id, maxsize: 5)
+fewd5 = Course.create!(name: "FEWD 5", start_date: 20141222, end_date: 20150320, classroom_id: classroom2.id, maxsize: 8)
+fewd6 = Course.create!(name: "FEWD 6", start_date: 20150322, end_date: 20150620, classroom_id: classroom4.id, maxsize: 10)
+fewd7 = Course.create!(name: "FEWD 7", start_date: 20150622, end_date: 20150920, classroom_id: classroom4.id, maxsize: 20)
+
+bewd1 = Course.create!(name: "BEWD 1", start_date: 20130922, end_date: 20131220, classroom_id: classroom6.id, maxsize: 14)
+bewd2 = Course.create!(name: "BEWD 2", start_date: 20131222, end_date: 20140320, classroom_id: classroom2.id, maxsize: 4)
+bewd3 = Course.create!(name: "BEWD 3", start_date: 20140322, end_date: 20140620, classroom_id: classroom1.id, maxsize: 8)
 bewd4 = Course.create!(name: "BEWD 4", start_date: 20140817, end_date: 20141215, classroom_id: classroom2.id, maxsize: 8)
+
+admin = User.create!(name: "Lexie Papodopolus", email: "lp@gmail.com", password: "password1", role: "Admin")
+
 
 
 instructor1 = User.create!(name: "Gerry Mathe", email: "gm@gmail.com", password: "password1", role: "Instructor")
@@ -55,14 +58,15 @@ instructor3 = User.create!(name: "Mathilda Thompson", email: "mt@gmail.com", pas
 instructor4 = User.create!(name: "Guy Brown", email: "gb@gmail.com", password: "password6", role: "Instructor")
 instructor5 = User.create!(name: "Tony Little", email: "tl@gmail.com", password: "password5", role: "Instructor")
 
-wdi1.instructors << instructor2
-wdi3.instructors << instructor2
+
 wdi5.instructors << instructor2
 wdi7.instructors << instructor2
-wdi2.instructors << instructor1
-wdi4.instructors << instructor1
+wdi9.instructors << instructor2
+wdi11.instructors << instructor2
 wdi6.instructors << instructor1
 wdi8.instructors << instructor1
+wdi10.instructors << instructor1
+wdi12.instructors << instructor1
 fewd1.instructors << instructor3
 fewd3.instructors << instructor3
 fewd5.instructors << instructor3
@@ -87,21 +91,21 @@ teaching_assistant7 = User.create!(name: "Edward Sharp", email: "es@gmail.com", 
 teaching_assistant8 = User.create!(name: "Gavin Henderson", email: "gh@gmail.com", password: "password1", role: "Teaching Assistant")
 teaching_assistant9 = User.create!(name: "Ben Franklin", email: "bf@gmail.com", password: "password1", role: "Teaching Assistant")
 
-wdi1.teaching_assistants << teaching_assistant1
-wdi1.teaching_assistants << teaching_assistant2
-wdi2.teaching_assistants << teaching_assistant3
-wdi2.teaching_assistants << teaching_assistant4
-wdi3.teaching_assistants << teaching_assistant1
-wdi3.teaching_assistants << teaching_assistant2
-wdi4.teaching_assistants << teaching_assistant1
-wdi4.teaching_assistants << teaching_assistant3
-wdi5.teaching_assistants << teaching_assistant4
 wdi5.teaching_assistants << teaching_assistant1
-wdi6.teaching_assistants << teaching_assistant2
+wdi5.teaching_assistants << teaching_assistant2
 wdi6.teaching_assistants << teaching_assistant3
-wdi7.teaching_assistants << teaching_assistant4
+wdi6.teaching_assistants << teaching_assistant4
 wdi7.teaching_assistants << teaching_assistant1
-wdi8.teaching_assistants << teaching_assistant2
+wdi7.teaching_assistants << teaching_assistant2
+wdi8.teaching_assistants << teaching_assistant1
+wdi8.teaching_assistants << teaching_assistant3
+wdi9.teaching_assistants << teaching_assistant4
+wdi9.teaching_assistants << teaching_assistant1
+wdi10.teaching_assistants << teaching_assistant2
+wdi10.teaching_assistants << teaching_assistant3
+wdi11.teaching_assistants << teaching_assistant4
+wdi11.teaching_assistants << teaching_assistant1
+wdi12.teaching_assistants << teaching_assistant2
 fewd1.teaching_assistants << teaching_assistant5
 fewd2.teaching_assistants << teaching_assistant6
 fewd3.teaching_assistants << teaching_assistant7
@@ -141,59 +145,60 @@ student23 = User.create!(name: "Laura Zing", email: "lz@gmail.com", password: "p
 student24 = User.create!(name: "Jacob Cummings", email: "jc@gmail.com", password: "password1", role: "Student")
 student25 = User.create!(name: "Simon Orange", email: "sor@gmail.com", password: "password1", role: "Student")
 student26 = User.create!(name: "Erik Jan", email: "ej@gmail.com", password: "password1", role: "Student")
+student27 = User.create!(name: "Dominc Hacking", email: "dominichacking@gmail.com", password: "password1", role: "Student")
 
-wdi1.students << student1
-wdi1.students << student2
-wdi1.students << student3
-wdi1.students << student4
-wdi1.students << student5
-wdi1.students << student6
-wdi1.students << student7
-wdi1.students << student8
-wdi1.students << student9
-wdi1.students << student10
-wdi1.students << student11
-wdi1.students << student12
+wdi12.students << student1
+wdi12.students << student2
+wdi12.students << student3
+wdi12.students << student4
+wdi12.students << student5
+wdi12.students << student6
+wdi12.students << student7
+wdi12.students << student8
+wdi12.students << student9
+wdi12.students << student10
+wdi12.students << student11
+wdi12.students << student12
 
-wdi2.students << student13
-wdi2.students << student14
-wdi2.students << student15
-wdi2.students << student16
-wdi2.students << student17
-wdi2.students << student18
-wdi2.students << student19
-wdi2.students << student20
-wdi2.students << student21
-wdi2.students << student22
-wdi2.students << student23
-wdi2.students << student24
-wdi2.students << student25
-wdi2.students << student26
+wdi11.students << student13
+wdi11.students << student14
+wdi11.students << student15
+wdi11.students << student16
+wdi11.students << student17
+wdi11.students << student18
+wdi11.students << student19
+wdi11.students << student20
+wdi11.students << student21
+wdi11.students << student22
+wdi11.students << student23
+wdi11.students << student24
+wdi11.students << student25
+wdi11.students << student26
 
-wdi3.students << student1
-wdi3.students << student2
-wdi3.students << student3
-wdi3.students << student4
-wdi3.students << student5
-wdi3.students << student6
-wdi3.students << student7
-wdi3.students << student8
-wdi3.students << student9
-wdi3.students << student10
-wdi3.students << student11
-wdi3.students << student12
+wdi10.students << student1
+wdi10.students << student2
+wdi10.students << student3
+wdi10.students << student4
+wdi10.students << student5
+wdi10.students << student6
+wdi10.students << student7
+wdi10.students << student8
+wdi10.students << student9
+wdi10.students << student10
+wdi10.students << student11
+wdi10.students << student12
 
-wdi4.students << student16
-wdi4.students << student17
-wdi4.students << student18
-wdi4.students << student19
-wdi4.students << student20
-wdi4.students << student21
-wdi4.students << student22
-wdi4.students << student23
-wdi4.students << student24
-wdi4.students << student25
-wdi4.students << student26
+wdi9.students << student16
+wdi9.students << student17
+wdi9.students << student18
+wdi9.students << student19
+wdi9.students << student20
+wdi9.students << student21
+wdi9.students << student22
+wdi9.students << student23
+wdi9.students << student24
+wdi9.students << student25
+wdi9.students << student26
 
 
 wdi5.students << student1

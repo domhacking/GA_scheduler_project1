@@ -11,48 +11,75 @@
  *= require_self
  *= require_tree .
  */
-/*
+
 *{
-  width: 1200px;
-}
-
-body{
-  margin:0px;
-} 
-
-div h1  {
-  height:150px;
-  width:300px;
-  display: inline-block;
-
-}
-
-h1{
-  border: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
 }
 
 .header{
   width: 1460px ;
-  height: 80px;
+  height: 60px;
   background-color: black;
   color: white;
-  padding: 20px;
-  margin: 0px;
-  text-align: 
+  margin: 0px; 
+ 
+
+}
+
+.header img{
+display: inline-block;
+width: 35px;
+height: 35px;
+}
+
+header h1{
+  width:35%;
+  display:inline-block;
+  font-size: 40px;
+  font-family: "PFDinTextCompProBold",Impact,Arial; 
+  margin-top: 5px;
+  margin-right: 315px;
+}
+
+.login{
+  font-size: 15px;
+  display: inline-block;
+  font-family: "News706BT-RomanC",Georgian;
+  text-decoration: none;
+  width: 10%;
+}
+
+.login a{
+  font-family: "News706BT-RomanC",Georgian;
+  text-decoration: none;
+  color: white;
 }
 
 nav {
   display: inline-block;
   padding: 20px;
-  margin-left: 0px;
   border: 0px;
-  width: 250px;
+  width: 28%;
   height: 20px;
-
+  font-size: 20px;
+  font-style: bold;
+  margin-right: -17px;
 }
 
 nav a {
   text-decoration: none;
   color: white;
-
+  padding: 10px;
+  font-family: "News706BT-RomanC",Georgia
 }
+
+.main {
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
+
+

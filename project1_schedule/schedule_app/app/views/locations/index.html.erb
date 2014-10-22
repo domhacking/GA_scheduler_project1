@@ -1,12 +1,100 @@
-<h2>Listing locations</h2>
+<h2>Welcome to the GENERAL ASSEMBLY scheduler website</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<p>Here at 9 Back Hill we look at running a smooth and efficient teaching experience, hence why we have hired the best developer to produce this smart website.</p>
+
+<p>At the third stroke the time sponsored by GA is : </p>
+
+
+<p> We currently have the following classes in sessoin:</p>
+
+<div class="classroom1">
+    <p>
+  <b>Name:</b>
+  <%#= @course.name %>
+</p>
+<p>
+  <b>Maxsize:</b>
+  <%#= @course.maxsize %>
+</p>
+<p>
+  <b>Head Teacher:</b>
+  <% #@course.instructors.each do |instructors|%>
+        <%#= instructors.name %>
+        <%# end %>
+</p>
+<p>
+  <b>Teaching Assitants:</b>
+  <% #@course.teaching_assistants.each do |teaching_assistants|%>
+        <%#= teaching_assistants.name %>
+        <%# end %>
+</p>
+<p>
+  <b>Students:</b>
+  <%# @course.students.each do |students|%>
+        <%#= students.name %>
+        <%# end %>
+</p>
+</div>
+
+<div class="classroom2">
+    <p>
+  <b>Name:</b>
+  <%#= @course.name %>
+</p>
+<p>
+  <b>Maxsize:</b>
+  <%#= @course.maxsize %>
+</p>
+<p>
+  <b>Head Teacher:</b>
+  <% #@course.instructors.each do |instructors|%>
+        <%#= instructors.name %>
+        <%# end %>
+</p>
+<p>
+  <b>Teaching Assitants:</b>
+  <% #@course.teaching_assistants.each do |teaching_assistants|%>
+        <%#= teaching_assistants.name %>
+        <%# end %>
+</p>
+<p>
+  <b>Students:</b>
+  <%# @course.students.each do |students|%>
+        <%#= students.name %>
+        <%# end %>
+</p>
+</div>
+
+<div class="classroom3">
+    <p>
+  <b>Name:</b>
+  <%#= @course.name %>
+</p>
+<p>
+  <b>Maxsize:</b>
+  <%#= @course.maxsize %>
+</p>
+<p>
+  <b>Head Teacher:</b>
+  <% #@course.instructors.each do |instructors|%>
+        <%#= instructors.name %>
+        <%# end %>
+</p>
+<p>
+  <b>Teaching Assitants:</b>
+  <% #@course.teaching_assistants.each do |teaching_assistants|%>
+        <%#= teaching_assistants.name %>
+        <%# end %>
+</p>
+<p>
+  <b>Students:</b>
+  <%# @course.students.each do |students|%>
+        <%#= students.name %>
+        <%# end %>
+</p>
+</div>
+
+
 
 <% @locations.each do |location| %>
   <tr>

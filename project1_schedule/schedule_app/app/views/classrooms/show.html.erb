@@ -12,9 +12,9 @@
 
 <p>
 <b>Courses held in Classroom: </b>
-  <%= @classroom.courses %>
-
-
+  <% @classroom.courses.each do | course |%>
+  <%= course.name%>
+  <%end%>
 </p>
 
 

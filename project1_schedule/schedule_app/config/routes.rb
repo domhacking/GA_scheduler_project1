@@ -3,6 +3,7 @@ ScheduleApp::Application.routes.draw do
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   resources :sessions
+  get "/logout", to: "sessions#destroy"
   
   resources :users do 
     collection {post :search, to: 'users#search'}
@@ -18,7 +19,7 @@ ScheduleApp::Application.routes.draw do
 
   get "/events/:id", to: "courses#show"
 
-  get "/logout", to: "sessions#destroy" 
+   
   
   root :to => 'locations#index'
 

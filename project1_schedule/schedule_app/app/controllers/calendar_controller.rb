@@ -1,4 +1,4 @@
-class CalendarController < ApplicationController
+  class CalendarController < ApplicationController
   
   def index
       Course.all.each do |course|

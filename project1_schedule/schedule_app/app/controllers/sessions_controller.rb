@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
     def new
     end
- 
+  
     def create
-      user = User.where(email: params[:email]).first
+      user = User.find_by_email(params[:email])
       if user && user.authenticate(params[:password])# how do we know if a user is authenticated?
         session[:user_id] = user.id
         redirect_to root_url, notice: "Logged in!"

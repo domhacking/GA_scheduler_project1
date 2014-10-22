@@ -1,6 +1,8 @@
 class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
+  authorize_resource
+  skip_authorize_resource only: :index
   def index
     @locations = Location.all
 

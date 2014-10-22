@@ -13,12 +13,12 @@
 
 <p>
   <b>Start date:</b>
-  <%= @course.start_date %>
+  <%= @course.start_date.strftime("%d %b %Y") %>
 </p>
 
 <p>
   <b>End date:</b>
-  <%= @course.end_date %>
+  <%= @course.end_date.strftime("%d %b %Y") %>
 </p>
 
 <p>

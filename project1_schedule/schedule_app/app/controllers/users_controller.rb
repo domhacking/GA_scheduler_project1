@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
-
+  authorize_resource
   def index
     @q = User.search(params[:q])
     @users = @q.result(distinct: true)

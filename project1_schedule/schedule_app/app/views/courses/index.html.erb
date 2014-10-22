@@ -32,8 +32,8 @@
     <td><% course.instructors.each do |instructor|%>
         <%= instructor.name %>
         <% end %></td>
-    <td><%= course.start_date %></td>
-    <td><%= course.end_date %></td>
+    <td><%= course.start_date.strftime("%d %b %Y") %></td>
+    <td><%= course.end_date.strftime("%d %b %Y") %></td>
     <td><%=  %></td>
    
   </tr>

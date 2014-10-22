@@ -68,16 +68,6 @@
      <% end %>
   </p>
 
-  <p>Student: </p>
-  <p>
-
-     <% User.where(role: 'Student').each do |student| %>
-       <%= check_box_tag "course[student_ids][]", student.id, @course.students.include?(student), id: "user_student_ids_#{student.id}" %>
-       <%= f.label :student_ids, student.name, for: "user_student_ids_#{student.id}" %>
-       <br>
-     <% end %>
-  </p>
-
   <div class="actions">
     <%= f.submit %>
   </div>

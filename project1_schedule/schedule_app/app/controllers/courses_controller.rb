@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
-  
+  authorize_resource
   def index
     @q = Course.search(params[:q])
     @courses = @q.result(distinct: true)
