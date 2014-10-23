@@ -1,111 +1,102 @@
-<h2>Welcome to the GENERAL ASSEMBLY scheduler website</h2>
+<h2>WELCOME TO THE GENERAL ASSEMBLY SCHEDULER</h2>
 
-<p>Here at 9 Back Hill we look at running a smooth and efficient teaching experience, hence why we have hired the best developer to produce this smart website.</p>
+  <div class="intro">
+    <p>Here at 
+        <% @locations.each do |location| %> 
+        <%= link_to location.name, location %>
+        <% end %>
+      we look at running a smooth and efficient teaching experience, hence why we have hired the best developer to produce this smart website.</p>
+  </div>
 
-<p>At the third stroke the time sponsored by GA is : </p>
+  <div class = "time">
+    <p>At the third stroke the time sponsored by GA is : </p>
+    <p> We currently have the following classes in sessoin:</p>
+  </div>
 
-
-<p> We currently have the following classes in sessoin:</p>
-
-<div class="classroom1">
+  <div class="classroom1">
+        <p>
+      <b>Name:</b>
+      <%#= @course.name %>
+    </p>
     <p>
-  <b>Name:</b>
-  <%#= @course.name %>
-</p>
-<p>
-  <b>Maxsize:</b>
-  <%#= @course.maxsize %>
-</p>
-<p>
-  <b>Head Teacher:</b>
-  <% #@course.instructors.each do |instructors|%>
-        <%#= instructors.name %>
-        <%# end %>
-</p>
-<p>
-  <b>Teaching Assitants:</b>
-  <% #@course.teaching_assistants.each do |teaching_assistants|%>
-        <%#= teaching_assistants.name %>
-        <%# end %>
-</p>
-<p>
-  <b>Students:</b>
-  <%# @course.students.each do |students|%>
-        <%#= students.name %>
-        <%# end %>
-</p>
-</div>
-
-<div class="classroom2">
+      <b>Maxsize:</b>
+      <%#= @course.maxsize %>
+    </p>
     <p>
-  <b>Name:</b>
-  <%#= @course.name %>
-</p>
-<p>
-  <b>Maxsize:</b>
-  <%#= @course.maxsize %>
-</p>
-<p>
-  <b>Head Teacher:</b>
-  <% #@course.instructors.each do |instructors|%>
-        <%#= instructors.name %>
-        <%# end %>
-</p>
-<p>
-  <b>Teaching Assitants:</b>
-  <% #@course.teaching_assistants.each do |teaching_assistants|%>
-        <%#= teaching_assistants.name %>
-        <%# end %>
-</p>
-<p>
-  <b>Students:</b>
-  <%# @course.students.each do |students|%>
-        <%#= students.name %>
-        <%# end %>
-</p>
-</div>
-
-<div class="classroom3">
+      <b>Head Teacher:</b>
+      <% #@course.instructors.each do |instructors|%>
+            <%#= instructors.name %>
+            <%# end %>
+    </p>
     <p>
-  <b>Name:</b>
-  <%#= @course.name %>
-</p>
-<p>
-  <b>Maxsize:</b>
-  <%#= @course.maxsize %>
-</p>
-<p>
-  <b>Head Teacher:</b>
-  <% #@course.instructors.each do |instructors|%>
-        <%#= instructors.name %>
-        <%# end %>
-</p>
-<p>
-  <b>Teaching Assitants:</b>
-  <% #@course.teaching_assistants.each do |teaching_assistants|%>
-        <%#= teaching_assistants.name %>
-        <%# end %>
-</p>
-<p>
-  <b>Students:</b>
-  <%# @course.students.each do |students|%>
-        <%#= students.name %>
-        <%# end %>
-</p>
-</div>
+      <b>Teaching Assitants:</b>
+      <% #@course.teaching_assistants.each do |teaching_assistants|%>
+            <%#= teaching_assistants.name %>
+            <%# end %>
+    </p>
+    <p>
+      <b>Students:</b>
+      <%# @course.students.each do |students|%>
+            <%#= students.name %>
+            <%# end %>
+    </p>
+  </div>
 
+  <div class="classroom2">
+      <p>
+      <b>Name:</b>
+      <%#= @course.name %>
+    </p>
+    <p>
+      <b>Maxsize:</b>
+      <%#= @course.maxsize %>
+    </p>
+    <p>
+      <b>Head Teacher:</b>
+      <% #@course.instructors.each do |instructors|%>
+            <%#= instructors.name %>
+            <%# end %>
+    </p>
+    <p>
+      <b>Teaching Assitants:</b>
+      <% #@course.teaching_assistants.each do |teaching_assistants|%>
+            <%#= teaching_assistants.name %>
+            <%# end %>
+    </p>
+    <p>
+      <b>Students:</b>
+      <%# @course.students.each do |students|%>
+            <%#= students.name %>
+            <%# end %>
+    </p>
+  </div>
 
+  <div class="classroom3">
+    <p>
+      <b>Name:</b>
+      <%#= @course.name %>
+    </p>
+    <p>
+      <b>Maxsize:</b>
+      <%#= @course.maxsize %>
+    </p>
+    <p>
+      <b>Head Teacher:</b>
+      <% #@course.instructors.each do |instructors|%>
+            <%#= instructors.name %>
+            <%# end %>
+    </p>
+    <p>
+      <b>Teaching Assitants:</b>
+      <% #@course.teaching_assistants.each do |teaching_assistants|%>
+            <%#= teaching_assistants.name %>
+            <%# end %>
+    </p>
+    <p>
+      <b>Students:</b>
+      <%# @course.students.each do |students|%>
+            <%#= students.name %>
+            <%# end %>
+    </p>
+  </div>
 
-<% @locations.each do |location| %>
-  <tr>
-    <td><%= location.name %></td>
-    <td><%= link_to 'Show', location %></td>
-    <td><%= link_to 'Edit', edit_location_path(location) %></td>
-    <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Location', new_location_path %>
