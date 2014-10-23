@@ -5,29 +5,35 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'ga_big_red_logo.ico' %>
 </head>
 <body>
   <header class="header">
-    <%=image_tag("red_logo.png")%>
-    <h1>GENERAL ASSEMBLY SCHEDULER</h1>
+
+    <a href="http://localhost:3000/locations/1"><%=image_tag("red_logo.png")%>
+    <h1>GENERAL ASSEMBLY SCHEDULER </h1></a>
+    
     <nav>
       <%= link_to "Courses", courses_path %> 
       <%= link_to "Classrooms", classrooms_path %> 
-      <%= link_to "Users", users_path %> 
+      <%= link_to "Users", users_path %>
       <%= link_to "Calendar", calendar_path %> 
-      </nav>
+    </nav>
       <div class="login"> 
-      <% if current_user %>
-        <%= current_user.name%>
-        <%= link_to "Logout", logout_path %>
-      <%else%>
-        <%= link_to "Login", new_session_path %> or <%= link_to "Signup", new_user_path %>
-      <% end %>
+        <% if current_user %>
+          <%= current_user.name%>
+          <%= link_to "Logout", logout_path %>
+        <%else%>
+          <%= link_to "Login", new_session_path %> or <%= link_to "Signup", new_user_path %>
+        <% end %>
       </div>
     
   </header>
     
-  <%#= applications.time %>
+  <div class = "time">
+    Current Time: <%= Time.now.strftime("%H:%M") %>
+  </div>
+
 
    <% flash.each do |name, msg| %>
       <div class="flash-message flash-message-<%= name %>">
@@ -35,7 +41,7 @@
       </div>
     <% end %>
 
-  <div class="main">  
+  <div class = "main"> 
     <%= yield %>
   </div>
 

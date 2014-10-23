@@ -16,6 +16,7 @@ ScheduleApp::Application.routes.draw do
 
 
   resources :locations
+  
 
   get "/events/:id", to: "courses#show"
 

@@ -18,12 +18,6 @@ class ApplicationController < ActionController::Base
     end 
   end
 
-  # def time
-  #   time1 = Time.new
-
-  #   puts "Current Time : " + time1.inspect
-  # end
-
 
 end
 

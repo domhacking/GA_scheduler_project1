@@ -12,7 +12,7 @@ User.delete_all
 Classroom.delete_all
 
 
-location = Location.create!(name: "9 Back Hill")
+location = Location.create!(name: "GA London 9 Back Hill, London EC1R 5EN")
 
 
 classroom1 = Classroom.create!(name: "Classroom 1", maxpeople: 15, location_id: location.id)
@@ -39,7 +39,7 @@ fewd1 = Course.create!(name: "FEWD 1", start_date: 20130922, end_date: 20131220,
 fewd2 = Course.create!(name: "FEWD 2", start_date: 20131222, end_date: 20140320, classroom_id: classroom3.id, maxsize: 7)
 fewd3 = Course.create!(name: "FEWD 3", start_date: 20140322, end_date: 20140620, classroom_id: classroom1.id, maxsize: 10)
 fewd4 = Course.create!(name: "FEWD 4", start_date: 20140622, end_date: 20140920, classroom_id: classroom8.id, maxsize: 5)
-fewd5 = Course.create!(name: "FEWD 5", start_date: 20141222, end_date: 20150320, classroom_id: classroom2.id, maxsize: 8)
+fewd5 = Course.create!(name: "FEWD 5", start_date: 20140922, end_date: 20141220, classroom_id: classroom2.id, maxsize: 8)
 fewd6 = Course.create!(name: "FEWD 6", start_date: 20150322, end_date: 20150620, classroom_id: classroom4.id, maxsize: 10)
 fewd7 = Course.create!(name: "FEWD 7", start_date: 20150622, end_date: 20150920, classroom_id: classroom4.id, maxsize: 20)
 

@@ -1,102 +1,22 @@
 <h2>WELCOME TO THE GENERAL ASSEMBLY SCHEDULER</h2>
 
-  <div class="intro">
-    <p>Here at 
-        <% @locations.each do |location| %> 
-        <%= link_to location.name, location %>
-        <% end %>
-      we look at running a smooth and efficient teaching experience, hence why we have hired the best developer to produce this smart website.</p>
+  <div class = "intro">
+    <p>Here at GA we look at running a smooth and efficient teaching experience, hence why we have hired the best developer to produce this smart website. Login below to view class schedule:</p>
   </div>
 
-  <div class = "time">
-    <p>At the third stroke the time sponsored by GA is : </p>
-    <p> We currently have the following classes in sessoin:</p>
-  </div>
 
-  <div class="classroom1">
-        <p>
-      <b>Name:</b>
-      <%#= @course.name %>
-    </p>
-    <p>
-      <b>Maxsize:</b>
-      <%#= @course.maxsize %>
-    </p>
-    <p>
-      <b>Head Teacher:</b>
-      <% #@course.instructors.each do |instructors|%>
-            <%#= instructors.name %>
-            <%# end %>
-    </p>
-    <p>
-      <b>Teaching Assitants:</b>
-      <% #@course.teaching_assistants.each do |teaching_assistants|%>
-            <%#= teaching_assistants.name %>
-            <%# end %>
-    </p>
-    <p>
-      <b>Students:</b>
-      <%# @course.students.each do |students|%>
-            <%#= students.name %>
-            <%# end %>
-    </p>
+  <div class="sign_up">
+      <%=image_tag("ga_big_red_logo.png")%>
+    
+    <%= form_tag sessions_path do %>
+      <div class="field">
+        <%= label_tag :email %>
+        <%= text_field_tag :email, params[:email] %>
+      </div><br>
+      <div class="field">
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+      </div><br>
+      <div class="actions"><%= submit_tag "Log in" %></div>
+    <% end %>
   </div>
-
-  <div class="classroom2">
-      <p>
-      <b>Name:</b>
-      <%#= @course.name %>
-    </p>
-    <p>
-      <b>Maxsize:</b>
-      <%#= @course.maxsize %>
-    </p>
-    <p>
-      <b>Head Teacher:</b>
-      <% #@course.instructors.each do |instructors|%>
-            <%#= instructors.name %>
-            <%# end %>
-    </p>
-    <p>
-      <b>Teaching Assitants:</b>
-      <% #@course.teaching_assistants.each do |teaching_assistants|%>
-            <%#= teaching_assistants.name %>
-            <%# end %>
-    </p>
-    <p>
-      <b>Students:</b>
-      <%# @course.students.each do |students|%>
-            <%#= students.name %>
-            <%# end %>
-    </p>
-  </div>
-
-  <div class="classroom3">
-    <p>
-      <b>Name:</b>
-      <%#= @course.name %>
-    </p>
-    <p>
-      <b>Maxsize:</b>
-      <%#= @course.maxsize %>
-    </p>
-    <p>
-      <b>Head Teacher:</b>
-      <% #@course.instructors.each do |instructors|%>
-            <%#= instructors.name %>
-            <%# end %>
-    </p>
-    <p>
-      <b>Teaching Assitants:</b>
-      <% #@course.teaching_assistants.each do |teaching_assistants|%>
-            <%#= teaching_assistants.name %>
-            <%# end %>
-    </p>
-    <p>
-      <b>Students:</b>
-      <%# @course.students.each do |students|%>
-            <%#= students.name %>
-            <%# end %>
-    </p>
-  </div>
-

@@ -1,7 +1,25 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+       
 *{
   margin-left: 0px;
   margin-top: 0px;
+  font-family: 
 }
+
 
 .header{
   width: 1460px ;
@@ -9,6 +27,11 @@
   background-color: black;
   color: white;
   margin: 0px; 
+}
+
+.header a h1{
+  text-decoration: none;
+  color: white
 }
 
 .header img{
@@ -26,6 +49,7 @@ header h1{
   margin-right: 315px;
 }
 
+
 .login{
   font-size: 15px;
   display: inline-block;
@@ -35,7 +59,7 @@ header h1{
 }
 
 .login a{
-  font-family: "News706BT-RomanC",Georgian;
+  font-family: "News706BT-RomanC",Georgia;
   text-decoration: none;
   color: white;
 }
@@ -55,21 +79,18 @@ nav a {
   text-decoration: none;
   color: white;
   padding: 10px;
-  font-family: "News706BT-RomanC",Georgia
+  font-family: "News706BT-RomanC",Georgia;
 }
-
-.main{
+.main {
+  margin-left: 15%;
+  margin-right: 15%;
   margin-top: 5%;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom: 5%;  
+  margin-bottom: 5%;
 }
 
 footer{
   background-color: #222222;
-  
-  
-
+  width: 1460px ;
 }
 
 footer .contact{
@@ -77,8 +98,7 @@ footer .contact{
   color: white;
   font: 1.125rem/1.875rem "News706BT-RomanC",Georgia;
   margin-left: 20px;   
-  margin-top: 30px;
-  
+  margin-top: 30px; 
 }
 
 footer .social{

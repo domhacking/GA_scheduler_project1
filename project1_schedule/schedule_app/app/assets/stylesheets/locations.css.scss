@@ -1,3 +1,4 @@
+
 h2{
   font-family: "PFDinTextCompProBold",Impact,Arial;
   text-transform: uppercase;
@@ -7,23 +8,69 @@ h2{
   text-align: center; 
 }
 
-
-.classroom1{
-  border: solid 3px;
-  display: inline-block;
-  width: 260px;
-  margin: 5px 2px 10px 0px ;
+.intro p{
+  font-size: 20px;  
+   font-family: "News706BT-RomanC", Georgia;
+  width: 70%;
+  margin: 0 auto; 
+  text-align: justify;  
 }
 
-.classroom2{
+.sign_up{
+  width: 22%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sign_up img {
+  margin-bottom: 30px;
+}
+
+.sign_up .field {
+  border: red;
+  font-size: 20px;
+  font-family: "News706BT-RomanC",Georgia;
+}
+
+.field {
+  margin: 0 auto;
+}
+
+.actions {
+margin-bottom: 3px;
+padding: 1rem 2rem 1rem;
+border: 0;
+font: 800 1.125rem/normal "Circular",Helvetica,sans-serif;
+text-align: center;
+-webkit-font-smoothing: antialiased;
+border-radius: 3px;
+transition: all .15s ease-in-out;
+color: #fff;
+background-color: #fa4542;
+box-shadow: 0 3px 0 0 #be0201;
+text-decoration: none;
+color: inherit;
+}
+
+
+
+
+.classroom {
   border: solid 3px;
   display: inline-block;
   width: 260px;
   margin: 5px 2px 10px 0px ;
 }
-.classroom3{
-  border: solid 3px;
-  display: inline-block;
-  width: 260px;
-  margin: 5px 2px 10px 0px ;
-}
+
+
+
+
+
+
+
+
+
+
+
+

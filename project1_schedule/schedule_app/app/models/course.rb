@@ -7,5 +7,15 @@ class Course < ActiveRecord::Base
   has_and_belongs_to_many :teaching_assistants, class_name: "User", conditions: [ "role=?", "Teaching Assistant"]
   has_and_belongs_to_many :admins, class_name: "User", conditions: [ "role=?", "Admin"]
 
+  scope :started_courses, lambda { where('start_date <= ?', Time.zone.now)}
+  scope :unended_courses, lambda { where('end_date >= ?', Time.zone.now)}
+  scope :running_courses, started_courses & unended_courses
+
+  # scope :current_course, lambda {
+  #   { conditions:
+  #    ['start_date < ?', Time.zone.now], 
+  #    ['end_date > ?', Time.zone.now]
+  #   }
+  # }
 
 end

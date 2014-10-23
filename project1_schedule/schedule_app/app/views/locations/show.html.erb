@@ -1,10 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @location.name %>
-</p>
+<h2>Current Classes on at GA</h2>
 
+    <h3> We currently have the following classes in session on at <%= @location.name %>:</h3>
+  
 
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+  <% @running_courses.each do |running_course|%>
+    <div class="classroom">
+          <p>
+        <b>Name:<%= running_course.name %></b>
+       
+      </p>
+      <p>
+        <b>Maxsize:</b>
+        <%= running_course.maxsize %>
+      </p>
+      <p>
+        <b>Head Teacher:</b>
+        <% running_course.instructors.each do |instructors|%>
+              <%= instructors.name %>
+              <% end %>
+      </p>
+      <p>
+        <b>Teaching Assitants:</b>
+        <% running_course.teaching_assistants.each do |teaching_assistants|%>
+              <%= teaching_assistants.name %>, 
+              <% end %>
+      </p>
+      <p>
+        <b>Students:</b>
+        <% running_course.students.each do |students|%>
+              <%= students.name %>, 
+              <% end %>
+      </p>
+
+    </div>
+
+  <% end %>
+
+  <p>Please remember to swing your moods as well. Tell us how the class is going...<a href="http://ga-moodswings.herokuapp.com/">GA mood swing</a> </p>
