@@ -1,4 +1,4 @@
-<h2>Listing courses</h2>
+<h2>GA Course History</h2>
 
 <%= search_form_for @q do |f| %>
     <p>
@@ -10,36 +10,34 @@
     </p>
 <% end %>
 
+<%= link_to 'New Course', new_course_path %>
+
+<div class = "courses">
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Classroom</th>
-    <th>Maxsize</th>
-    <th>Head Teacher</th>
-    <th>Start date</th>
-    <th>End date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <tr>
+        <td>Name</td>
+        <td>Classroom</td>
+        <td>Maxsize</td>
+        <td>Head Teacher</td>
+        <td>Start date</td>
+        <td>End date</td>
+    </tr>
 
-<% @courses.each do |course| %>
-  <tr>
-
-    <td><%= link_to course.name, course  %></td>
-    <td><%= course.classroom_id %></td>
-    <td><%= course.maxsize %></td>
-    <td><% course.instructors.each do |instructor|%>
-        <%= instructor.name %>
-        <% end %></td>
-    <td><%= course.start_date.strftime("%d %b %Y") %></td>
-    <td><%= course.end_date.strftime("%d %b %Y") %></td>
-    <td><%=  %></td>
-   
-  </tr>
-<% end %>
+    <% @courses.each do |course| %>
+    <tr>
+        <td><%= link_to course.name, course  %></td>
+        <td><%= course.classroom_id %></td>
+        <td><%= course.maxsize %></td>
+        <td><% course.instructors.each do |instructor|%>
+            <%= instructor.name %>
+            <% end %></td>
+        <td><%= course.start_date.strftime("%d %b %Y") %></td>
+        <td><%= course.end_date.strftime("%d %b %Y") %></td>
+        
+      </tr>
+    <% end %>
 </table>
-
+</div>
 <br />
 
-<%= link_to 'New Course', new_course_path %>
+

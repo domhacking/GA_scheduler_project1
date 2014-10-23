@@ -3,3 +3,13 @@
 
 en:
   hello: "Hello world"
+
+ransack:
+  asc: "ascending"
+  desc: "descending"
+predicates:
+    cont: "contains"
+    start: "starts with"
+    end: "ends with"
+    gt: "greater than"
+    lt: "less than"

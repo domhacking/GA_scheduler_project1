@@ -71,13 +71,16 @@ span{
   box-shadow: 3px 3px 5px 6px #ccc;
   border: solid 1px; 
   width: 260px;
-  height: 350px;
+  height: 270px;
   border-radius: 15px;
   margin: 10px 20px 10px 0px ;
   background-color:#fa4542;
   display: inline-block;
   padding: 10px 10px 10px 10px;
   transition: all 0.2s;
+  font-size: 15px;
+  font-family: 'Fauna One', serif;
+
 } 
 
 .classroom:hover {

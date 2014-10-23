@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<h3>User Information</h3>
+
+<div class = "user_show">
 <p>
   <b>Name:</b>
   <%= @user.name %>
@@ -15,10 +18,8 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>  
+</div>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Destroy', user_path, method: :delete, data: { confirm: 'Are you sure?' } %> |

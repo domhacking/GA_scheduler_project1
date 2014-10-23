@@ -1,4 +1,5 @@
-<h2>Listing users</h2>
+<h2>The GA current students and alumni</h2>
+
 
 <%= search_form_for @q, url: search_users_path, method: :post do |f| %>
     <%= f.condition_fields do |c| %>
@@ -14,13 +15,13 @@
         <% end %>
     <%= f.submit %>
 <% end %>
-
+<div class = "users">
 <table>
   <tr>
-    <th>Name</th>
-    <th>Role</th>
-    <th>Course History</th>
-    <th>Email</th>
+    <td>Name</td>
+    <td>Role</td>
+    <td>Course History</td>
+    <td>Email</td>
   
   </tr>
 
@@ -38,7 +39,7 @@
   </tr>
 <% end %>
 </table>
-
+</div>
 <br />
 
 <%= link_to 'New User', new_user_path %>

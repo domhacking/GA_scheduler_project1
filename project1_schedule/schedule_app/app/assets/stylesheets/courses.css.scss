@@ -1,3 +1,120 @@
-// Place all the styles related to the Classrooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.course_show {
+  border: solid 5px red;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+h2{
+  font-family: "PFDinTextCompProBold",Impact,Arial;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin: 0 auto;
+  margin: 20px;
+  text-align: center; 
+}
+
+
+.courses {
+  margin:0px;padding:0px;
+  width:100%;
+  box-shadow: 10px 10px 5px #888888;
+  border:1px solid #000000;
+  
+  -moz-border-radius-bottomleft:8px;
+  -webkit-border-bottom-left-radius:8px;
+  border-bottom-left-radius:8px;
+  
+  -moz-border-radius-bottomright:8px;
+  -webkit-border-bottom-right-radius:8px;
+  border-bottom-right-radius:8px;
+  
+  -moz-border-radius-topright:8px;
+  -webkit-border-top-right-radius:8px;
+  border-top-right-radius:8px;
+  
+  -moz-border-radius-topleft:8px;
+  -webkit-border-top-left-radius:8px;
+  border-top-left-radius:8px;
+}.courses table{
+    border-collapse: collapse;
+        border-spacing: 0;
+  width:100%;
+  height:100%;
+  margin:0px;padding:0px;
+}.courses tr:last-child td:last-child {
+  -moz-border-radius-bottomright:8px;
+  -webkit-border-bottom-right-radius:8px;
+  border-bottom-right-radius:8px;
+}
+.courses table tr:first-child td:first-child {
+  -moz-border-radius-topleft:8px;
+  -webkit-border-top-left-radius:8px;
+  border-top-left-radius:8px;
+}
+.courses table tr:first-child td:last-child {
+  -moz-border-radius-topright:8px;
+  -webkit-border-top-right-radius:8px;
+  border-top-right-radius:8px;
+}.courses tr:last-child td:first-child{
+  -moz-border-radius-bottomleft:8px;
+  -webkit-border-bottom-left-radius:8px;
+  border-bottom-left-radius:8px;
+}.courses tr:hover td{
+  background-color:#d3e9ff;
+    
+
+}
+.courses td{
+  vertical-align:middle;
+    background:-o-linear-gradient(bottom, #ffffff 5%, #d3e9ff 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #d3e9ff) ); 
+  background:-moz-linear-gradient( center top, #ffffff 5%, #d3e9ff 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#d3e9ff");  background: -o-linear-gradient(top,#ffffff,d3e9ff);
+
+  background-color:#ffffff;
+
+  border:1px solid #000000;
+  border-width:0px 1px 1px 0px;
+  text-align:left;
+  padding:7px;
+  font-size:14px;
+  font-family:Arial;
+  font-weight:normal;
+  color:#000000;
+}.courses tr:last-child td{
+  border-width:0px 1px 0px 0px;
+}.courses tr td:last-child{
+  border-width:0px 0px 1px 0px;
+}.courses tr:last-child td:last-child{
+  border-width:0px 0px 0px 0px;
+}
+.courses tr:first-child td{
+    background:-o-linear-gradient(bottom, #0057af 5%, #007fff 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0057af), color-stop(1, #007fff) );
+  background:-moz-linear-gradient( center top, #0057af 5%, #007fff 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#0057af", endColorstr="#007fff");  background: -o-linear-gradient(top,#0057af,007fff);
+
+  background-color:#0057af;
+  border:0px solid #000000;
+  text-align:center;
+  border-width:0px 0px 1px 1px;
+  font-size:20px;
+  font-family:Georgia;
+  font-weight:bold;
+  color:#ffffff;
+}
+.courses tr:first-child:hover td{
+  background:-o-linear-gradient(bottom, #0057af 5%, #007fff 100%);  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0057af), color-stop(1, #007fff) );
+  background:-moz-linear-gradient( center top, #0057af 5%, #007fff 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#0057af", endColorstr="#007fff");  background: -o-linear-gradient(top,#0057af,007fff);
+
+  background-color:#0057af;
+}
+.courses tr:first-child td:first-child{
+  border-width:0px 0px 1px 0px;
+}
+.courses tr:first-child td:last-child{
+  border-width:0px 0px 1px 1px;
+}
+
+
+
+

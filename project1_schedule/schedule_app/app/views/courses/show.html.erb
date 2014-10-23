@@ -1,48 +1,50 @@
 <p id="notice"><%= notice %></p>
+<h3>COURSE INFORMATION</h3>
 
-<p>
-  <b>Name:</b>
-  <%= @course.name %>
-</p>
+<div class = "course_show">
+  <p>
+    <b>Name:</b>
+    <%= @course.name %>
+  </p>
 
-<p>
-  <b>Maxsize:</b>
-  <%= @course.maxsize %>
-</p>
-
-
-<p>
-  <b>Start date:</b>
-  <%= @course.start_date.strftime("%d %b %Y") %>
-</p>
-
-<p>
-  <b>End date:</b>
-  <%= @course.end_date.strftime("%d %b %Y") %>
-</p>
-
-<p>
-  <b>Head Teacher:</b>
-  <% @course.instructors.each do |instructors|%>
-        <%= instructors.name %>
-        <% end %>
-</p>
-<p>
-  <b>Teaching Assitants:</b>
-  <% @course.teaching_assistants.each do |teaching_assistants|%>
-        <%= teaching_assistants.name %>
-        <% end %>
-</p>
+  <p>
+    <b>Maxsize:</b>
+    <%= @course.maxsize %>
+  </p>
 
 
-<p>
-  <b>Students:</b>
-  <% @course.students.each do |students|%>
-        <%= students.name %>
-        <% end %>
-</p>
+  <p>
+    <b>Start date:</b>
+    <%= @course.start_date.strftime("%d %b %Y") %>
+  </p>
+
+  <p>
+    <b>End date:</b>
+    <%= @course.end_date.strftime("%d %b %Y") %>
+  </p>
+
+  <p>
+    <b>Head Teacher:</b>
+    <% @course.instructors.each do |instructors|%>
+          <%= instructors.name %>
+          <% end %>
+  </p>
+  <p>
+    <b>Teaching Assitants:</b>
+    <% @course.teaching_assistants.each do |teaching_assistants|%>
+          <%= teaching_assistants.name %>
+          <% end %>
+  </p>
 
 
+  <p>
+    <b>Students:</b>
+    <% @course.students.each do |students|%>
+          <%= students.name %>
+          <% end %>
+  </p>
+
+</div>
 
 
 <%= link_to 'Edit', edit_course_path(@course) %> | 
