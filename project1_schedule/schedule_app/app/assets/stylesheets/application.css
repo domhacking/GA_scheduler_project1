@@ -17,7 +17,7 @@
 *{
   margin-left: 0px;
   margin-top: 0px;
-  font-family: 
+  font-family: "News706BT-RomanC",Georgia;
 }
 
 
@@ -53,7 +53,7 @@ header h1{
 .login{
   font-size: 15px;
   display: inline-block;
-  font-family: "News706BT-RomanC",Georgian;
+  font-family: "News706BT-RomanC",Georgia;
   text-decoration: none;
   width: 10%;
 }
@@ -81,6 +81,11 @@ nav a {
   padding: 10px;
   font-family: "News706BT-RomanC",Georgia;
 }
+
+nav a:hover{
+  opacity: 0.9;
+}
+
 .main {
   margin-left: 15%;
   margin-right: 15%;

@@ -53,17 +53,57 @@ text-decoration: none;
 color: inherit;
 }
 
+span{
+  color: #fa4542;
+  font-family: "PFDinTextCompProBold",Impact,Arial;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
 
-
-
-.classroom {
-  border: solid 3px;
-  display: inline-block;
-  width: 260px;
-  margin: 5px 2px 10px 0px ;
+.classroombox{
+  margin: 0 auto;
+  width: 92%;
 }
 
 
+.classroom {
+  vertical-align: top;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  border: solid 1px; 
+  width: 260px;
+  height: 350px;
+  border-radius: 15px;
+  margin: 10px 20px 10px 0px ;
+  background-color:#fa4542;
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  transition: all 0.2s;
+} 
+
+.classroom:hover {
+  transform: scale(1.05);
+}
+
+.classroombox p a{
+  text-decoration: none;
+  color: black;
+}
+
+
+h3 a{  
+  margin-bottom: 3px;  
+  border: 0;
+  font: 800 1.125rem/normal "Circular",Helvetica,sans-serif;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 3px;
+  transition: all .15s ease-in-out;
+  color: #fff;
+  background-color: #00FF00;
+  box-shadow: 0 3px 0 0 #00EE00;
+  text-decoration: none;
+  color: inherit 
+}
 
 
 
