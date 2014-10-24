@@ -7,7 +7,7 @@
             <%= c.attribute_fields do |a| %>
             <%= a.attribute_select associations: [:user] %>
             <% end %>
-            <%= c.predicate_select %>
+            <%= c.predicate_select only:[:cont] %>
                 <%= c.value_fields do |v| %>
                     <%= v.text_field :value %>
                 <% end %>

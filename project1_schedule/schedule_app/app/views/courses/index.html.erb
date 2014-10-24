@@ -1,16 +1,21 @@
 <h2>GA Course History</h2>
 
 <%= search_form_for @q do |f| %>
-    <p>
-        <%= f.label :name_cont %>
-        <%= f.text_field :name_cont %>
-    </p>
-    <p>
-        <%= f.submit %>
-    </p>
-<% end %>
+   
+    <div class= "search_bar">    
+        <div class = "search_field">
+            <p>
+                Course search: <%= f.text_field :name_cont %>
+            </p>
+        </div>
+        
+        <div class = "actions_search">
+            <%= f.submit %>
+        </div>   
+            <% end %>
+    </div>
 
-<%= link_to 'New Course', new_course_path %>
+
 
 <div class = "courses">
 <table>
@@ -38,6 +43,10 @@
     <% end %>
 </table>
 </div>
+
 <br />
 
+<div class = "actions">
+    <%= link_to 'New Course', new_course_path %>
+</div>
 

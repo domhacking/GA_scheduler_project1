@@ -15,7 +15,7 @@
 
 /* Outer most container */
 .ec-calendar {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: Georgia;
   font-size: 11px;
   line-height: 14px;
   margin: 0;
@@ -31,7 +31,7 @@
 }
 
 .ec-month-name {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -42,7 +42,7 @@
 /* Containers */
 .ec-body {
   position: relative;
-  border-right: 1px solid #303030;
+  border-right: 1px solid #fa4542;
   white-space: nowrap;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .ec-today-bg {
-  background-color: #ffffdd;
+  background-color: #fa4542;
 }
 
 .ec-row-table {
